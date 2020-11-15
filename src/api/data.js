@@ -1,0 +1,113 @@
+const data = [
+    {
+        id: 1,
+        views: 0,
+        title: 'Tom Yum Goong (Spicy Shrimp Soup)',
+        subtitle: 'This dish is a delicate balance of sour, salty, spicy, and sweet, so it’s no wonder that this ranks high in the World’s 50 Best Foods survey!',
+        prep: 'Shrimp is mixed in a hot and sour broth flavored with lemongrass, kaffir lime leaves, galangal, lime juice, fish sauce, and chili peppers for a spicy kick. You can add in your choice of meat for this which can be chicken, beef, pork, or shrimp. You can also order tom yum goong with coconut milk (tom yum goong nam kohn) or without (tom yum goong nam sai).',
+        ingredients: ['Shrimp', 'lemongrass', 'kaffir lime leaves', 'galangal', 'lime juice', 'fish sauce',  'chili peppers'],
+        image: 'images/tomyumgoong.jpg'         
+    },
+    {
+        id: 2,
+        views: 0,
+        title: 'Pad Thai (Stir-Fried Noodles)',
+        subtitle: 'If you find tom yum goong too spicy for your liking, why not order the sweet and sour crowd favorite Thai food, the pad thai?',
+        prep: 'These rice noodles are stir-fried with tofu, bean sprouts, eggs, and either shrimp or chicken followed by some other seasonings like chili, fish sauce, ground peanuts, and sugar. If I may add a tip, add a dash of lime juice before digging in!',
+        ingredients:[],
+        image: 'images/padthai.jpg'
+    },
+    {
+        id: 3,
+        views: 0,
+        title: 'Gaeng Keow Wan Gai (Green Chicken Curry)',
+        subtitle: 'For the spiciest curry you can get, look no further than the gaeng keow wan gai!',
+        prep: 'Slices of chicken, Thai eggplant, bamboo shoots, coriander, and basil is combined with the flavourful green curry paste that’s a combination of coconut milk, green chili, kaffir lime, galangal, shrimp paste, cilantro, lemongrass, and other spices. (P.S.: Gaeng keow wan gai is best served with fragrant jasmine rice!)',
+        ingredients:[],
+        image: 'images/greenchickencurry.jpg'
+    },
+    {
+        id: 4,
+        views: 0,
+        title: 'Gaeng Daeng (Red Curry)',
+        subtitle: '',
+        prep: 'Select from the usual chicken, beef, pork, or maybe even duck, shrimp, or tofu. Your choice of meat is then cooked in delicious red curry paste and coconut milk. Afterwards, it is seasoned with garlic, shallots, chili peppers, galangal, fish sauce, and kaffir lime leaves for that complex Thai food flavor! Yum!',
+        ingredients:[],
+        image: 'images/redcurry.jpg'         
+    },
+    {
+        id: 5,
+        views: 0,
+        title: 'Khao Pad (Fried Rice)',
+        subtitle: '',
+        prep: 'Consisting of Thai jasmine rice, small meat slices, egg, onions, garlic and sometimes even tomatoes along with various seasonings, this Thai food dish may be simple but it packs a great mix of ingredients and flavors! At times it comes in other variants like coconut fried rice, pineapple fried rice and basil fried rice.',
+        ingredients:[],
+        image: '/images/khaopad.jpg'          
+    },
+    {
+        id: 6,
+        views: 0,
+        title: 'Tom Kha Gai (Chicken in Coconut Soup)',
+        subtitle: '',
+        prep: 'This sweet and tangy soup dish is another safe bet for travelers! If you’re curious, this Thai food dish is made of chicken strips, chili, galangal, lemongrass, shallots, and lime that are cooked in coconut milk for a tasty meal',
+        ingredients:[],
+        image: 'images/tomkhagai.jpg' 
+    },
+    {
+        id: 7,
+        views: 0,
+        title: 'Khao Soi (Creamy Coconut Curry Noodle Soup)',
+        subtitle: 'Delight in the different textures of this regional specialty from northern Thailand.',
+        prep: 'This silky noodle dish is cooked in coconut milk-based curry, then garnished with crispy egg noodles. The hearty meal can also be cooked with curdled blood or rice noodles, depending on where you order.',
+        ingredients:[],
+        image: 'images/khaosoi.jpg' 
+    },
+    {
+        id: 8,
+        views: 0,
+        title: 'Yum Pla Duk Foo (Crispy Catfish with Green Mango Salad)',
+        subtitle: 'Here’s another play on contrasting textures and flavors when it comes to Thai Food!',
+        prep: '',
+        ingredients:[],
+        image: 'images/yumpladukfoo.jpg'
+    },
+    {
+        id: 9,
+        views: 0,
+        title: 'Som Tam (Spicy Green Papaya Salad)',
+        subtitle: '',
+        prep: 'Som tam’s main component is shredded green papaya, which is cloaked in the flavors of ground chili, cherry tomatoes, garlic, and green beans. Fish sauce, lime, sugar, and peanuts are also thrown in for a spicy, sweet and sour flavor.',
+        ingredients:[],
+        image: 'images/somtam.jpg' 
+    },
+    {
+        id: 10,
+        views: 0,
+        title: 'Pad Pak Boong (Morning Glory)',
+        subtitle: '',
+        prep: 'The leaves and hollow stems of morning glory, also known as water spinach, are stir-fried at a high heat together with fermented black bean, fish sauce, oyster sauce, garlic, and chili.',
+        ingredients:[],
+        image: 'images/padpakboong.jpg'   
+    },
+    {
+        id: 11,
+        views: 0,
+        title: 'Pad Kee Mao (Drunken Noodles)',
+        subtitle: '',
+        prep: 'Savor a hearty dish made of stir-fried rice noodles, Thai basil, vegetables and your preferred meat tossed in fish sauce and soy sauce.',
+        ingredients:[],
+        image: 'images/padkeemao.jpg'   
+    },
+    {
+        id: 12,
+        views: 0,
+        title: 'Khao Niew Mamuang (Mango Sticky Rice)',
+        subtitle: 'End your meals on a sweet note with this lovely treat! Indulge in juicy mango slices and a sticky rice drenched in coconut cream or condensed milk.',
+        prep: '',
+        ingredients:[],
+        image: 'images/khaoniewmamuang.jpg'   
+    }
+ 
+];
+
+export default data;

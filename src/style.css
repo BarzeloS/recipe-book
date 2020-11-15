@@ -1,0 +1,22 @@
+body {
+    background: radial-gradient(circle, rgba(89,120,95,1) 0%, rgba(71,110,78,1) 0%, rgba(185,210,190,1) 100%);
+}
+
+.rCard {
+    box-shadow: 0 0 10px rgb(202, 202, 202);
+    transition:0.4s;
+}
+
+.rCard:hover { 
+    transform: scale(1.02); 
+    transition:0.3s;
+} 
+
+.search {
+    box-shadow: 0 0 10px rgb(158, 158, 158);
+}
+
+.hnav {
+    margin-left: 22px;
+    font-size: 18px;
+}
