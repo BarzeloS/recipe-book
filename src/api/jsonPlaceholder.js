@@ -1,13 +1,11 @@
 import axios from 'axios';
 
-const getUsers = async () => {
+const recipesData = async () => {
     // return axios.get('https://jsonplaceholder.typicode.com/users')
     //     .then(response => response.data);
     
-    const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+    const response = await axios.get('data/db.json');
     return response.data;
 }
 
-export {
-    getUsers
-};
+export default recipesData;

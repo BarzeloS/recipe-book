@@ -1,57 +1,94 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
+import data from '..//api/data';
+
 
 function RecipePageComponent() {
-  
+
+    const { id } = useParams();
+
+    const [recipes, setRecipe] = useState([]);
+    const getRecipesFromApi = async () => {
+        const apiRecipes = await data;
+        setTimeout(() => {
+            setRecipe(apiRecipes);
+        }, 800)
+    };
+
+    useEffect(() => {
+        getRecipesFromApi();
+    }, [])
+
+    const recipe = recipes.find((recipe) => recipe.id == id);
+
+    let i = 0; // for keys of li's below
+
+    if (!recipes.length) {
+        return <img src='/images/loader.gif' />;
+    
+    }
+    
     return (
 
-    <div className="container">
-        <div className="jumbotron jumbotron-fluid">
-            <div className="container">
-                <div className="row">
-                    
-                    <div className="col-lg-5">
-                        <h1 className="display-4">Papaya Salad</h1>
-                        <p className="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    </div>
-                    <div className="col-lg-7">
-                        <img src="https://www.sbs.com.au/food/sites/sbs.com.au.food/files/styles/full/public/41-papayasalad_0.jpg?itok=cTf0Y6QY" className="img-fluid" alt="Responsive image"/>
-                    </div>
 
+        <div className="jumbotron mb-0">
+
+            <div className="row">
+
+                <div className="col-lg-5">
+                    <h1 className="display-4">{recipe.title}</h1>
+                    <p className="lead">{recipe.subtitle}</p>
                 </div>
-
-
-                <div className="row mt-5">
-                    <div className="col-1"></div>
-                    <div className="col-10">
-                        <h4>Ingredients</h4>
-                        <ul className="list-group list-group-flush">
-                            <li className="list-group-item">Cras justo odio</li>
-                            <li className="list-group-item">Dapibus ac facilisis in</li>
-                            <li className="list-group-item">Morbi leo risus</li>
-                            <li className="list-group-item">Porta ac consectetur ac</li>
-                            <li className="list-group-item">Vestibulum at eros</li>
-                        </ul>
-                    </div>
-                    <div className="col-1"></div>
-
-                </div>
-
-
-                <div className="row mt-5">
-                    <div className="col-1"></div>
-                    <div className="col-10">
-                        <h4>Preperation</h4>
-                        <p>Here is the preperation process..</p>
-                    </div>
-                    <div className="col-1"></div>
-
+                <div className="col-lg-7">
+                    <img style={{ boxShadow: ' 0 0 7px grey' }} src={recipe.image} className="img-fluid" alt="Responsive image" />
                 </div>
 
             </div>
+
+
+            <div className="row mt-5">
+                <div className="col-1"></div>
+                <div className="col-10">
+                    <h4>Ingredients</h4>
+                    <ul className="list-group list-group-flush">
+
+                        {
+                            recipe.ingredients.map(ingredient => <li key={i += 1} className="list-group-item">{ingredient}</li>)
+                        }
+
+                    </ul>
+                </div>
+                <div className="col-1"></div>
+
+            </div>
+
+
+            <div className="row mt-5">
+                <div className="col-1"></div>
+                <div className="col-10">
+                    <h4>Preperation</h4>
+                    <p>{recipe.prep}</p>
+                </div>
+                <div className="col-1"></div>
+
+            </div>
+            <div className="row mt-5">
+                <div className="col-6 text-center">
+                    {id > 1 ? <Link to={`/recipes/${Number(id) - 1}`} className="btn btn-outline-secondary btn-sm">Previos Recipe</Link> : ''}
+                </div>
+                <div className="col-6 text-center">
+                    {id < recipes.length ? <Link to={`/recipes/${Number(id) + 1}`} className="btn btn-outline-secondary btn-sm">Next Recipe</Link> : ''}
+                </div>
+            </div>
+
         </div>
-    </div>
- 
-  );
+
+
+    );
 }
 
 export default RecipePageComponent;
+
+

@@ -1,10 +1,12 @@
 body {
-    background: radial-gradient(circle, rgba(89,120,95,1) 0%, rgba(71,110,78,1) 0%, rgba(185,210,190,1) 100%);
+    background: radial-gradient(circle, rgb(112, 128, 115) 0%, rgb(86, 122, 89) 0%, rgb(163, 182, 167) 100%);
 }
 
 .rCard {
-    box-shadow: 0 0 10px rgb(202, 202, 202);
+    box-shadow: 0 0 10px rgb(152, 165, 162); 
     transition:0.4s;
+    border:none;
+    background-color: #e9ecef;
 }
 
 .rCard:hover { 
@@ -13,10 +15,48 @@ body {
 } 
 
 .search {
-    box-shadow: 0 0 10px rgb(158, 158, 158);
+    box-shadow: 0 0 6px rgb(109, 155, 143);
+    transition:0.3s;
+    border: none;
+    border-radius: 10px;
+     
+}
+
+.search:focus {
+    transform: scale(1.05);
+    transition:0.2s;
 }
 
 .hnav {
-    margin-left: 22px;
+    margin-left: 35px;
     font-size: 18px;
+    
+}
+.main {
+    background-color: rgb(199, 199, 199);
+    box-shadow: 0 0 4px 1px #5e8a7f;
+    padding: 25px;
+    
+   
+}
+
+.homenav {
+    background: linear-gradient(110deg, rgba(47,62,70,0.95) 0%, rgba(82,121,111,0.97) 100%);
+}
+
+.footnav {
+    background: linear-gradient(110deg, rgba(82,121,111,0.95) 0%, rgba(47,62,70,0.98) 100%);
+}
+
+input[type="radio"] {
+    transform: scale(1.5);
+}
+
+label {
+    font-size:20px;
+    color: #50776d;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color:#595c5b;
 }
